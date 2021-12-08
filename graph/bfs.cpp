@@ -17,6 +17,7 @@ void bfs(int source)    {
 
         for (int i = 0; i < v[w].size(); i++)
             if(visited[v[w][i]] == false)   {
+                level[v[w][i]] = level[w] + 1;
                 q.push(v[w][i]);
                 visited[v[w][i]] = true;
             }       
